@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Grade Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+  <div class="hero-content">
+    <h1>Student Grade Checker</h1>
+    <p class="subtitle">Academic Performance Management System</p>
+    <span class="login-badge" id="loginTime"></span>
+  </div>
+</header>
+
+
+<p class="time" id="loginTime"></p>
+
+<!-- Faculty Section -->
+<section class="card">
+  <h2>Faculty & Subjects</h2>
+  <form id="facultyForm">
+    <input type="text" id="faculty" placeholder="Faculty Name" required>
+    <input type="text" id="subjects" placeholder="Subjects (Math, Science, English)" required>
+    <input type="number" id="totalMarks" placeholder="Total Marks per Subject" required>
+    <button type="submit" class="primary-btn">Save Details</button>
+  </form>
+</section>
+
+<!-- Student Entry -->
+<section class="card">
+  <h2>Add Student</h2>
+  <form id="studentForm">
+    <input type="text" id="name" placeholder="Student Name" required>
+    <input type="number" id="roll" placeholder="Roll Number" required>
+    <input type="text" id="marks" placeholder="Marks (80, 70, 90)" required>
+    <button type="submit" class="primary-btn">Add Student</button>
+  </form>
+</section>
+
+<!-- Stats -->
+<section class="stats">
+  <div class="stat-box">
+    <span>Total Students</span>
+    <b id="totalStudents">0</b>
+  </div>
+  <div class="stat-box">
+    <span>Class Average (%)</span>
+    <b id="classAverage">0</b>
+  </div>
+  <div class="stat-box">
+    <span>Highest Percentage</span>
+    <b id="highestPercent">0</b>
+  </div>
+</section>
+
+<!-- Student Records -->
+<section class="card">
+  <h2>Student Records</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Roll</th>
+        <th>Percentage</th>
+        <th>Grade</th>
+        <th>Progress</th>
+      </tr>
+    </thead>
+    <tbody id="studentList"></tbody>
+  </table>
+
+  <button id="downloadBtn" class="secondary-btn">⬇ Download Excel</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
